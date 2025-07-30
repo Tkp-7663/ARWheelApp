@@ -23,6 +23,9 @@ target 'ARWheelApp' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  pod 'ViroReact', :path => '../node_modules/@reactvision/react-viro/ios/'
+  pod 'ViroKit', :path => '../node_modules/@reactvision/react-viro/ios/dist/ViroRenderer/'
+
   target 'ARWheelAppTests' do
     inherit! :complete
     # Pods for testing
