@@ -89,10 +89,12 @@ ARWheelApp/
 ├── android/
 ├── ios/
 ├── node_modules/
-├── assets/                            ← ไฟล์ static เช่น รูป ไอคอน โมเดล AR
-│   ├── images/
-│   ├── models/                          ← glb/usdz/3d models
-│   └── markers/                         ← รูป marker สำหรับ marker-based AR
+├── assets/
+│   ├── images/                        ← ภาพทั่วไปและ UI ที่ไม่เกี่ยวกับ AR โดยตรง
+│   │   └── icons/                       ← icon แอป
+│   ├── models/                        ← glb/usdz/3d models
+│   │   └── default/                     ← โมเดลล้อแม็กพื้นฐาน
+│   └── markers/                       ← ภาพ marker ที่กล้อง AR ใช้สำหรับระบุพิกัด (สำหรับ marker-based AR)
 ├── src/
 │   ├── api/                           ← ฟังก์ชันเชื่อมต่อ backend, Firebase, etc.
 │   │   ├── firebase.ts                  ← ตั้งค่า Firebase App
