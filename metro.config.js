@@ -28,6 +28,8 @@ const config = {
             "jpg",
             "jpeg",
             "usdz",
+            "onnx",
+            "tflite",
         ],
     },
 };
