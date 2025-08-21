@@ -105,6 +105,9 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    packagingOptions {
+        pickFirst '**/*.so'
+    }
 }
 
 dependencies {
@@ -122,6 +125,9 @@ dependencies {
     implementation 'androidx.media3:media3-exoplayer-hls:1.1.1'
     implementation 'androidx.media3:media3-exoplayer-smoothstreaming:1.1.1'
     implementation 'com.google.protobuf.nano:protobuf-javanano:3.1.0'
+    implementation 'org.tensorflow:tensorflow-lite:2.14.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.14.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.4.4'
 
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")

@@ -22,6 +22,7 @@ class MainApplication : Application(), ReactApplication {
               // Packages that cannot be autolinked yet can be added manually here, for example:
               // add(MyReactNativePackage())
               add(ReactViroPackage(ReactViroPackage.ViroPlatform.AR))
+              add(TFLitePackage())
             }
 
         override fun getJSMainModuleName(): String = "index"
@@ -42,5 +43,7 @@ class MainApplication : Application(), ReactApplication {
       // If you opted-in for the New Architecture, we load the native entry point for this app.
       load()
     }
+    FrameProcessorPluginRegistry.addFrameProcessorPlugin("yuvToBitmap") { YuvToBitmapFrameProcessor() }
+    FrameProcessorPluginRegistry.addFrameProcessorPlugin("detectWheels") { DetectWheelsFrameProcessor() }
   }
 }
